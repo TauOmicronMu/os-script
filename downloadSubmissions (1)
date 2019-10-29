@@ -1,0 +1,49 @@
+#!/bin/sh
+
+usernames="jaa603
+hxz961
+hxx953
+hxs845
+hlf764
+gxl967
+gxa548
+glk910
+gcw737
+fxw629
+fxl724
+exs709
+exh955
+egc766
+eaj627
+dxb735
+djt712
+dcu642
+cxm763
+cxd738
+cxc357
+cxb1014
+cxa657
+ctm684
+bxs633
+bxh538
+axx945
+axs1562
+axn778
+axl639
+axk680
+arm649
+ajc785
+ajb769
+agp692
+agm716
+adw761"
+
+
+for student in $usernames ; do
+    cd /mnt/data/tmp/opsys/exercises
+    git clone git@git-teaching.cs.bham.ac.uk:mod-os-2019/$student.git
+    cd $student
+    git checkout `git rev-list -1 --before="18 Oct 2019 16:05:00" master` ;
+done
+
+
